@@ -1,3 +1,30 @@
 import { Routes } from '@angular/router';
+import { LibroComponent } from './pages/libro/libro.component'; 
+import { AboutComponent } from './pages/about/about.component';
+import { ProductoComponent } from './pages/producto/producto.component'; 
 
-export const routes: Routes = [];
+import { CamionComponent } from './pages/camion/camion.component';
+
+export const routes: Routes = [
+    
+    {
+        path : 'producto',
+        component: ProductoComponent
+    },
+    {
+        path: 'libro',
+        component: LibroComponent
+    },
+    {
+        path: 'camion',
+        component:CamionComponent
+    },
+    {
+        path: 'about',
+        component:AboutComponent
+    },
+    {
+        path:'**',
+        redirectTo: 'home'
+    }
+];
